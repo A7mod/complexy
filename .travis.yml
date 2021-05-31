@@ -1,0 +1,18 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t a7modkrishna/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true a7modkrishna/react-test npm test
+
+after_success:
+  - docker build -t a7modkrishna/multi-client ./client
+  - docker build -t a7modkrishna/multi-nginx ./nginx
+  - docker build -t a7modkrishna/multi-server ./server
+  - docker build -t a7modkrishna/multi-worker ./worker
+
+
+  
