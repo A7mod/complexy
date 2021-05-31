@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services:
   - docker
@@ -14,5 +15,8 @@ after_success:
   - docker build -t a7modkrishna/multi-server ./server
   - docker build -t a7modkrishna/multi-worker ./worker
 
+# Log in to the Docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
+# Take those Images and push them to docker hub
   
