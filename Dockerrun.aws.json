@@ -13,6 +13,15 @@
             "hostname": "api",
             "essential": false
         },
+        {
+            "name": "worker",
+            "image": "a7modkrishna/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            
+        }
         
     ]
 }
