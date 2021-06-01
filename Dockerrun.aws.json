@@ -6,6 +6,13 @@
             "image": "a7modkrishna/multi-client",
             "hostname": "client",
             "essential": false
-        }
+        },
+        {
+            "name": "server",
+            "image": "a7modkrishna/multi-server",
+            "hostname": "api",
+            "essential": false
+        },
+        
     ]
 }
