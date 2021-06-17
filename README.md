@@ -15,4 +15,10 @@ SInce we are making a Fibonacci generator, the general work of the following for
                 
 ## Dockerizing Multiple Services 
 We need to make Dev Dockerfile (Dockerfile.dev) for the React App, Express Server & Worker.
+The Dockerfile contains :
+  - copy package.json
+  - Run npm install
+  - copy over everything else
+  - docker comppose should set up volumes to 'share' files
+
 
