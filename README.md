@@ -44,7 +44,20 @@ In the last project, the nginx server was used to host all production files. We'
    - If someone comes to '/api', send them to server upstream
    
    
-   
+Something about `webstock connections` and routing rules. 
+
+## A continuous Integrated Workflow for Multiple Images
+
+**Multi-container Setup**
+1. Push code to Github (du-uh)
+2. Travis automatically pulls repo
+3. Travis builds a test image & tests the code
+4. Travis builds production image
+5. Travis pushes built prod image to Docker Hub
+6. Travis pushes project to AWS EB (Elastic Beanstalk)
+7. EB pulls image from Docker Hub, Deploys.
+
+
    
 
    
