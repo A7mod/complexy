@@ -22,4 +22,16 @@ The Dockerfile contains :
   - copy over everything else
   - docker comppose should set up volumes to 'share' files
 
+Adding Postgres as a service : (compose file)
+  - Postgres
+    - What image to use?
+  - Redis
+    - what image to use?
+  - Server
+    - specify build
+    - specify volumes
+    - specify envir. variables
 
+***Specify Build***
+
+   
