@@ -32,6 +32,19 @@ Adding Postgres as a service : (compose file)
     - specify volumes
     - specify envir. variables
 
-***Specify Build***
+***Nginx Path Routing***
+In the last project, the nginx server was used to host all production files. We're taking care of the development envir. by nginx.
+- here we are avoiding the pain in the butt of assigning & remembering the ports. Having a common backend to do the task is a better und feasible option. 
+
+****steps**** :
+1. Tell nginx there is an 'upstream' server at client:3000
+2. Tell nginx there is an 'upstream' server at server:5000
+   - Listen to Port 80
+   - If someone comes to '/', send them to client upstream
+   - If someone comes to '/api', send them to server upstream
+   
+   
+   
+   
 
    
