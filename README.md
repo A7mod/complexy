@@ -60,9 +60,11 @@ Something about `webstock connections` and routing rules.
 then we make the Dockerfile for Production env
 
 ***multiple nginx instances***
-### Development
+#### Development
 Browser will make a request into the initial nginx server and this nginx server is specifically responsible for ROUTING! and making sure that the requests get to the correct backend.
-### Production
+#### Production
+When we move into production, we have to take the 'port 3000' into account. Here as well, we have the nginx server solely dedicated to serving up our production react files, but rather than listening on port 80 & being the 'first jump' inside EB instance, it is going to be listening on port 3000. Users are only going to access this nginx server here with all our production files by first going through the other copy of nginx that is specifically responsible for Routing! .
+We have to do a little bit of configuration of the nginx server, other than like last time (the project), to make sure that it listens to port 3000 instead, and still exposes all react production assets on port 3000. 
 
 
 
