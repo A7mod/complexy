@@ -57,6 +57,14 @@ Something about `webstock connections` and routing rules.
 6. Travis pushes project to AWS EB (Elastic Beanstalk)
 7. EB pulls image from Docker Hub, Deploys.
 
+then we make the Dockerfile for Production env
+
+***multiple nginx instances***
+### Development
+Browser will make a request into the initial nginx server and this nginx server is specifically responsible for ROUTING! and making sure that the requests get to the correct backend.
+### Production
+
+
 
    
 
